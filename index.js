@@ -1,12 +1,14 @@
 const express = require("express");
 const dbConnect = require("./config/db");
 const colors = require("colors");
+const cors = require("cors");
 const workoutRoutes = require("./routes/workoutRoutes");
 require("dotenv").config();
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 // function to connect database
 dbConnect();
