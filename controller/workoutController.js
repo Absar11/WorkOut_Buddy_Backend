@@ -9,11 +9,7 @@ const createWorkout = async (req, res) => {
 
   try {
     const workout = await Workout.create({ title, weight, reps });
-
-    res.status(200).json({
-      message: "New Workout Added Succesfully",
-      data: workout,
-    });
+    res.status(200).json(workout);
   } catch (error) {
     console.log(error);
     res.status(400).json({
