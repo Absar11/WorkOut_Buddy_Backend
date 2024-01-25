@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
   res.send("App is working");
 });
 
-app.use("/api/v1", workoutRoutes);
+app.use("/api/workout", workoutRoutes);
 
 const port = process.env.PORT || 5000;
 
