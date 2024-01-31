@@ -1,3 +1,4 @@
+const router = require("express").Router();
 const {
   createWorkout,
   getWorkouts,
@@ -5,8 +6,6 @@ const {
   deleteWorkout,
   updateWorkout,
 } = require("../controller/workoutController");
-
-const router = require("express").Router();
 
 router.post("/", createWorkout);
 router.get("/", getWorkouts);

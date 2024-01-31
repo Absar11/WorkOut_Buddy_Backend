@@ -3,6 +3,7 @@ const dbConnect = require("./config/db");
 const colors = require("colors");
 const cors = require("cors");
 const workoutRoutes = require("./routes/workoutRoutes");
+const userRoutes = require("./routes/userRoutes");
 require("dotenv").config();
 
 const app = express();
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/workout", workoutRoutes);
+app.use("/api/user", userRoutes);
 
 const port = process.env.PORT || 5000;
 
