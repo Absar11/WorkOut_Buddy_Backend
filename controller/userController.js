@@ -28,8 +28,10 @@ const login = async (req, res) => {
     const token = await generateToken(user._id);
 
     res.status(200).json({
+      status: "success",
       message: "Login Successfull",
-      payload: token,
+      token,
+      user_id: user._id,
     });
   } catch (error) {
     console.error(error);
